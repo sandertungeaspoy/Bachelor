@@ -18,9 +18,10 @@ public class VisualBox : MonoBehaviour
         
     }
 
-    public void destroyObject()
+    public void destroyObject(Transform parent)
     {
         //gameObject.SetActive(false);
         rend.enabled = false;
+        this.transform.SetParent(parent);
     }
 }
