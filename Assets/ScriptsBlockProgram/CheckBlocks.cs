@@ -14,6 +14,7 @@ public class CheckBlocks : MonoBehaviour
     private int[] correctAnswer = new int[5];
     private int a;
     public TextMesh text;
+    public Transform parent;
 
 
     private int[] randomAssignment;
@@ -110,6 +111,7 @@ public class CheckBlocks : MonoBehaviour
                     {
                         allBlocksPlaced = false;
                         outPutActive = false;
+                        text.text = "Create the pattern shown to the right";
                         DeleteBlocks();
                     }
                     
@@ -134,6 +136,16 @@ public class CheckBlocks : MonoBehaviour
             error = true;
         }
         */
+
+        if(map[2].getOutput() == 0)
+        {
+            text.text = "Cannot divide by 0 at Line 3";
+            return;
+        }
+        else
+        {
+            text.text = "Create the pattern shown to the right";
+        }
             for (int i = 1; i <= map[0].getOutput(); i++)
         {
             for(int j = 1; j <= map[1].getOutput(); j++)
@@ -191,7 +203,7 @@ public class CheckBlocks : MonoBehaviour
 
         for(int i = 0; i < blocks.Length; i++)
         {
-            blocks[i].destroyObject();
+            blocks[i].destroyObject(parent);
             
         }
     }
@@ -246,6 +258,7 @@ public class CheckBlocks : MonoBehaviour
     public int[] GetrandomAssignment()
     {
         int[] returnArray = new int[5];
+        /*
         for(int i = 0; i < returnArray.Length; i++)
         {
             if(i < 2)
@@ -258,6 +271,7 @@ public class CheckBlocks : MonoBehaviour
             }
             
         }
+        */
         returnArray[0] = Random.Range(3, 10);
         returnArray[1] = Random.Range(2, 10);
         returnArray[2] = Random.Range(2, returnArray[0]);
@@ -266,6 +280,11 @@ public class CheckBlocks : MonoBehaviour
 
 
         return returnArray;
+    }
+
+    public bool getAllPlaced()
+    {
+        return allBlocksPlaced;
     }
 
     public void WinText()
