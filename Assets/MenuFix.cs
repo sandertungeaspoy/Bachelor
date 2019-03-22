@@ -7,7 +7,8 @@ public class MenuFix : MonoBehaviour
 {
     // https://answers.unity.com/questions/1437486/vrtk-ui-doesnt-work-after-load-scene.html
     public GameObject EventSystem;
-    public VRTK_UIPointer PointerController;
+    public VRTK_UIPointer PointerControllerLeft;
+    public VRTK_UIPointer PointerControllerRight;
 
     private VRTK_VRInputModule[] inputModule;
 
@@ -27,8 +28,10 @@ public class MenuFix : MonoBehaviour
             {
                 
                 inputModule[0].enabled = true;
-                if (inputModule[0].pointers.Count == 0)
-                    inputModule[0].pointers.Add(PointerController);
+                if (inputModule[0].pointers.Count == 0) {
+                    inputModule[0].pointers.Add(PointerControllerLeft);
+                    inputModule[0].pointers.Add(PointerControllerRight);
+                }
                 print("enable input");
             }
             else
@@ -44,5 +47,6 @@ public class MenuFix : MonoBehaviour
         EventSystem.SetActive(true);
         EventSystem.GetComponent<EventSystem>().enabled = false;
         inputModule = EventSystem.GetComponents<VRTK_VRInputModule>();
+        
     }
 }
