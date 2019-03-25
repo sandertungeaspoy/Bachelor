@@ -174,7 +174,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4247434828813501343}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.02, y: 3.0046, z: 30}
+  m_LocalPosition: {x: 0, y: 3.0046, z: 30}
   m_LocalScale: {x: 0.0914338, y: 0.0914338, z: 0.0914338}
   m_Children: []
   m_Father: {fileID: 4247434828584899954}
@@ -229,8 +229,8 @@ TextMesh:
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
-  m_Anchor: 0
-  m_Alignment: 0
+  m_Anchor: 4
+  m_Alignment: 1
   m_TabSize: 4
   m_FontSize: 40
   m_FontStyle: 0
