@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1704837640932503125}
   m_LocalRotation: {x: -0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: -0.37199986, y: 0.0009999275, z: -2.2390003}
+  m_LocalPosition: {x: 0, y: 0.0009999275, z: -0.55}
   m_LocalScale: {x: 0.07635001, y: 0.4600007, z: 0.076350085}
   m_Children: []
   m_Father: {fileID: 4763217416588066778}
@@ -119,7 +119,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1704837641170903654}
   m_LocalRotation: {x: -0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: -0.37199986, y: 0.2980001, z: -1.4742002}
+  m_LocalPosition: {x: 0, y: 0.2980001, z: 0.22}
   m_LocalScale: {x: 0.07635001, y: 0.36809292, z: 0.076350085}
   m_Children: []
   m_Father: {fileID: 4763217416588066778}
@@ -211,7 +211,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1704837641833707134}
   m_LocalRotation: {x: -0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: -0.37199986, y: -0.27999997, z: -1.4742002}
+  m_LocalPosition: {x: 0, y: -0.27999997, z: 0.22}
   m_LocalScale: {x: 0.07635001, y: 0.36809292, z: 0.076350085}
   m_Children: []
   m_Father: {fileID: 4763217416588066778}
@@ -303,7 +303,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1919181602747739567}
   m_LocalRotation: {x: -0.7071068, y: -0.7071068, z: -0, w: 0}
-  m_LocalPosition: {x: -0.3770342, y: 0.006000042, z: -2.3758726}
+  m_LocalPosition: {x: 0, y: 0.006000042, z: -0.68}
   m_LocalScale: {x: 0.27940035, y: 0.16308017, z: 0.27940005}
   m_Children: []
   m_Father: {fileID: 4763217416588066778}
@@ -429,7 +429,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4763217416587633662}
   m_LocalRotation: {x: 0.49999997, y: 0.5000001, z: -0.5, w: -0.49999988}
-  m_LocalPosition: {x: -0.37803, y: -0.018866, z: -1.474}
+  m_LocalPosition: {x: 0, y: -0.018866, z: 0.22}
   m_LocalScale: {x: 53.956062, y: 62.1675, z: 33.07028}
   m_Children: []
   m_Father: {fileID: 4763217416588066778}
