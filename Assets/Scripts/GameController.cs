@@ -11,7 +11,12 @@ public class GameController : MonoBehaviour
     public DoorButton button;
     private Scene scene;
     public bool played = false;
+
     public bool fromHub = false;
+
+    public float score = 3000;
+
+
 
     private void Awake()
     {
@@ -74,6 +79,7 @@ public class GameController : MonoBehaviour
 
         }
 
+        updateScore();
 
     }
 
@@ -83,6 +89,16 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(4f);
         button.enabled = true;
         Destroy(gameObject);
+    }
+
+
+    public void updateScore()
+    {
+        if(score > 0)
+        {
+            score -= Time.deltaTime;
+        }
+        
     }
 
 }
