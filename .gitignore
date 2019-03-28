@@ -53,3 +53,31 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 *.csproj
+Assets/SmartCopier.meta
+Assets/SmartCopier/ReadMe.txt.meta
+Assets/SmartCopier/ReadMe.txt
+Assets/SmartCopier/NoCopyAttribute.cs.meta
+Assets/SmartCopier/NoCopyAttribute.cs
+Assets/SmartCopier/Editor/SmartCopier.cs.meta
+Assets/SmartCopier/Editor/SmartCopier.cs
+Assets/SmartCopier/Editor/PropertyWrapper.cs.meta
+Assets/SmartCopier/Editor/PropertyWrapper.cs
+Assets/SmartCopier/Editor/PropertyProvider.cs.meta
+Assets/SmartCopier/Editor/PropertyProvider.cs
+Assets/SmartCopier/Editor/CopyMode.cs.meta
+Assets/SmartCopier/Editor/CopyMode.cs
+Assets/SmartCopier/Editor/CopyContext.cs.meta
+Assets/SmartCopier/Editor/CopyContext.cs
+Assets/SmartCopier/Editor/ComponentWrapper.cs.meta
+Assets/SmartCopier/Editor/ComponentWrapper.cs
+Assets/SmartCopier/Editor/ComponentProvider.cs.meta
+Assets/SmartCopier/Editor/ComponentProvider.cs
+Assets/SmartCopier/Editor.meta
+.vs/VR TEST_19_03_QuizAndProgFIX/v15/Server/sqlite3/storage.ide-wal
+.vs/VR TEST_19_03_QuizAndProgFIX/v15/Server/sqlite3/storage.ide-shm
+.vs/VR TEST_19_03_QuizAndProgFIX/v15/Server/sqlite3/storage.ide
+.vs/VR TEST_19_03_QuizAndProgFIX/v15/.suo
+.vs/VR TEST_19_03_QuizAndProgFIX/v15/Server/sqlite3/storage.ide-wal
+.vs/VR TEST_19_03_QuizAndProgFIX/v15/Server/sqlite3/storage.ide-shm
+.vs/VR TEST_19_03_QuizAndProgFIX/v15/Server/sqlite3/storage.ide
+.vs/VR TEST_19_03_QuizAndProgFIX/v15/.suo
