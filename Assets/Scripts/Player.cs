@@ -168,7 +168,15 @@ public class Player : MonoBehaviour
     {
         print("Win switching Scenes" + currentQuestion);
         clearController.QuizCleared = GameWon;
-        SceneManager.LoadScene(0);
+        clearController = GameObject.Find("GameController").GetComponent<GameController>();
+        if (clearController.fromHub)
+        {
+            SceneManager.LoadScene(0);
+        }
+        else
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 
     public void nextQuestion()

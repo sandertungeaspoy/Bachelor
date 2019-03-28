@@ -19,6 +19,8 @@ public class BinaryPlayer : MonoBehaviour
     private float timeLimit = 40;
     private float score;
     private bool gameOver = false;
+    GameController clearController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -65,7 +67,15 @@ public class BinaryPlayer : MonoBehaviour
     IEnumerator ReturnToMain()
     {
         yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene(9);
+        clearController = GameObject.Find("GameController").GetComponent<GameController>();
+        if (clearController.fromHub)
+        {
+            SceneManager.LoadScene(0);
+        }
+        else
+        {
+            SceneManager.LoadScene(9);
+        }
     }
 
     void checkIfCorrect()

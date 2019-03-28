@@ -15,7 +15,7 @@ public class CheckBlocks : MonoBehaviour
     private int a;
     public TextMesh text;
     public Transform parent;
-
+    GameController clearController;
 
     private int[] randomAssignment;
     private Color[] colors ;
@@ -296,6 +296,14 @@ public class CheckBlocks : MonoBehaviour
     IEnumerator ReturnToMain()
     {
         yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene(10);
+        clearController = GameObject.Find("GameController").GetComponent<GameController>();
+        if (clearController.fromHub)
+        {
+            SceneManager.LoadScene(0);
+        }
+        else
+        {
+            SceneManager.LoadScene(10);
+        }
     }
 }

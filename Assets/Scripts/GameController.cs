@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -8,8 +9,9 @@ public class GameController : MonoBehaviour
     public bool QuizCleared;
     public Animator animatorButton;
     public DoorButton button;
+    private Scene scene;
     public bool played = false;
-
+    public bool fromHub = false;
 
     private void Awake()
     {
@@ -43,9 +45,20 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        button = GameObject.Find("Button").GetComponent<DoorButton>();
-
         
+        scene = SceneManager.GetActiveScene();
+
+        if(scene.name == "EscapeRoom")
+        {
+            button = GameObject.Find("Button").GetComponent<DoorButton>();
+        }
+
+        if (scene.name == "GameHub")
+        {
+            fromHub = true;
+            print("from hub");
+        }
+        print(fromHub);
 
         if (QuizCleared && !played)
         {

@@ -171,7 +171,15 @@ public class playerPhysicsQuiz : MonoBehaviour
     IEnumerator ReturnToMain()
     {
         yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene(3);
+
+        if (clearController.fromHub)
+        {
+            SceneManager.LoadScene(0);
+        }
+        else
+        {
+            SceneManager.LoadScene(3);
+        }
     }
 
     public bool gameFinished()
