@@ -28,7 +28,7 @@ public class PlayerCannon : MonoBehaviour
     private double yPositionBullet;
     public Text UI;
 
-   
+    GameController clearController;
 
     public VRTK_BaseControllable controllable;
     public VRTK_BaseControllable wheel;
@@ -328,7 +328,15 @@ public class PlayerCannon : MonoBehaviour
     IEnumerator ReturnToMain()
     {
         yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene(3);
+        clearController = GameObject.Find("GameController").GetComponent<GameController>();
+        if (clearController.fromHub)
+        {
+            SceneManager.LoadScene(0);
+        }
+        else
+        {
+            SceneManager.LoadScene(3);
+        }
     }
 
     /// <summary>
