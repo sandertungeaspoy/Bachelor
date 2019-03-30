@@ -276,7 +276,13 @@ public class CheckBlocks : MonoBehaviour
         returnArray[1] = Random.Range(2, 10);
         returnArray[2] = Random.Range(2, returnArray[0]);
         returnArray[3] = Random.Range(0, 10);
-        returnArray[4] = Random.Range(0, 10);
+
+        do
+        {
+            returnArray[4] = Random.Range(0, 10);
+        } while (returnArray[3] == returnArray[4]);
+
+        
 
 
         return returnArray;
