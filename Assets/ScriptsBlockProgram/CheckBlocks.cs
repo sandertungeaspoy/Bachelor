@@ -301,15 +301,16 @@ public class CheckBlocks : MonoBehaviour
 
     IEnumerator ReturnToMain()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(10f);
         clearController = GameObject.Find("GameController").GetComponent<GameController>();
+        clearController.gameWon = true;
         if (clearController.fromHub)
         {
             SceneManager.LoadScene(0);
         }
         else
         {
-            SceneManager.LoadScene(10);
+            SceneManager.LoadScene(11);
         }
     }
 }

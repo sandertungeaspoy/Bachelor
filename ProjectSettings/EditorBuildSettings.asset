@@ -38,4 +38,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EscapeRoom 3.unity
     guid: 07cd524975b50d14da168590d3d4af91
+  - enabled: 1
+    path: Assets/Scenes/EscapeRoom 4.unity
+    guid: 449a82737c2f6784fb7937b46d9db6ed
+  - enabled: 1
+    path: Assets/Scenes/GameHub.unity
+    guid: b90ca9a5a2a78144682ce644938ec1b7
   m_configObjects: {}

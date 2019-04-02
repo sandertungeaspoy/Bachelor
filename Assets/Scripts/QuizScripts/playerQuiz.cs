@@ -174,7 +174,7 @@ public class playerQuiz : MonoBehaviour
 
     IEnumerator ReturnToMain()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(10f);
         clearController = GameObject.Find("GameController").GetComponent<GameController>();
         if (clearController.fromHub)
         {

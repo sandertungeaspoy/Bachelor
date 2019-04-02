@@ -16,7 +16,8 @@ public class GameController : MonoBehaviour
 
     public float score = 3000;
 
-
+    public bool gameWon = false;
+    public TextMesh scoreText;
 
     private void Awake()
     {
@@ -79,6 +80,12 @@ public class GameController : MonoBehaviour
 
         }
 
+        if (gameWon)
+        {
+            scoreText = GameObject.Find("ScoreText").GetComponent<TextMesh>();
+            scoreText.text = "Your Score: " + score.ToString("0");
+        }
+
         updateScore();
 
     }
@@ -94,7 +101,7 @@ public class GameController : MonoBehaviour
 
     public void updateScore()
     {
-        if(score > 0)
+        if(score > 0 && !gameWon)
         {
             score -= Time.deltaTime;
             Debug.Log(score);

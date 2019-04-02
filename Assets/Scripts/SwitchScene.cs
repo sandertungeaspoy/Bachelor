@@ -80,6 +80,9 @@ public class SwitchScene : MonoBehaviour
             case "BlockProg":
                 SceneManager.LoadScene(8);
                 break;
+            case "Hub":
+                SceneManager.LoadScene(12);
+                break;
             default:
                 Debug.Log("No scene found");
                 break;

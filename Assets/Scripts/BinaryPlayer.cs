@@ -66,8 +66,9 @@ public class BinaryPlayer : MonoBehaviour
 
     IEnumerator ReturnToMain()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(10f);
         clearController = GameObject.Find("GameController").GetComponent<GameController>();
+        clearController.score += score;
         if (clearController.fromHub)
         {
             SceneManager.LoadScene(0);

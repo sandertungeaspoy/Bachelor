@@ -212,7 +212,7 @@ public class Player : MonoBehaviour
 
     public void gameLost()
     {
-        time = 8f;
+        time = 10f;
 
         if(time < 0)
         {
