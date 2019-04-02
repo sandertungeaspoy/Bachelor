@@ -97,6 +97,7 @@ public class GameController : MonoBehaviour
         if(score > 0)
         {
             score -= Time.deltaTime;
+            Debug.Log(score);
         }
         
     }
