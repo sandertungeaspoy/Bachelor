@@ -82,7 +82,7 @@ public class BinaryPlayer : MonoBehaviour
     {
         if (sum == correctAnswer && !gameOver)
         {
-            score += 100;
+            score += 10;
             NumberOfCorrectAnswers++;
             generateNewQuestion();
             
