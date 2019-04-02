@@ -70,9 +70,9 @@ public class GameController : MonoBehaviour
         {
             button = GameObject.Find("Button").GetComponent<DoorButton>();
             //button.enabled = false;
-            animatorButton = GameObject.Find("ButtonObject").GetComponent<Animator>();
+            animatorButton = GameObject.Find("DungeonButton").GetComponent<Animator>();
 
-            animatorButton.Play("LevelCleared");
+            animatorButton.Play("PopUP");
             played = true;
 
             //StartCoroutine("Delete");
