@@ -17511,7 +17511,7 @@ GameObject:
   - component: {fileID: 6996588009851229119}
   - component: {fileID: 6996588009851229118}
   m_Layer: 0
-  m_Name: NORGATEFIX
+  m_Name: NOR
   m_TagString: SnapCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
