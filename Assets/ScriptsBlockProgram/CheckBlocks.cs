@@ -306,7 +306,7 @@ public class CheckBlocks : MonoBehaviour
         clearController.gameWon = true;
         if (clearController.fromHub)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(12);
         }
         else
         {

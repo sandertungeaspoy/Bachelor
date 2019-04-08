@@ -71,7 +71,7 @@ public class BinaryPlayer : MonoBehaviour
         clearController.score += score;
         if (clearController.fromHub)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(12);
         }
         else
         {

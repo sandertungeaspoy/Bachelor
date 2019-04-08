@@ -323,7 +323,7 @@ public class CheckAllPorts : MonoBehaviour
         clearController = GameObject.Find("GameController").GetComponent<GameController>();
         if (clearController.fromHub)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(12);
         }
         else
         {

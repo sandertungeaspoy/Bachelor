@@ -174,7 +174,7 @@ public class playerPhysicsQuiz : MonoBehaviour
 
         if (clearController.fromHub)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(12);
         }
         else
         {
