@@ -64,7 +64,7 @@ public class GameController : MonoBehaviour
             fromHub = true;
             print("from hub");
         }
-        print(fromHub);
+        //print(fromHub);
 
         if (QuizCleared && !played)
         {
