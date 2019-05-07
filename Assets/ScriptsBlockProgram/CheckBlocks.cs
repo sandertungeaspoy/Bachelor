@@ -11,6 +11,7 @@ public class CheckBlocks : MonoBehaviour
     private bool allBlocksPlaced = false;
     private bool outPutActive = false;
     private float firstBlockHeight = 4;
+    private double firstBlockZ = 3.216;
     private int[] correctAnswer = new int[5];
     private int a;
     public TextMesh text;
@@ -62,7 +63,7 @@ public class CheckBlocks : MonoBehaviour
     {
         for (int i = 0; i < blocks.Length; i++)
         {
-            if (blocks[i].transform.position.y >= firstBlockHeight -0.1 && blocks[i].transform.position.y <= firstBlockHeight + 0.1) 
+            if (blocks[i].transform.position.y >= firstBlockHeight -0.1 && blocks[i].transform.position.y <= firstBlockHeight + 0.1 ) 
             {
                 map[0] = blocks[i];
                 
@@ -82,7 +83,7 @@ public class CheckBlocks : MonoBehaviour
             {
                 map[3] = blocks[i];
             }
-            if ((blocks[i].transform.position.y >= (firstBlockHeight - 2) - wrongMargin && blocks[i].transform.position.y <= (firstBlockHeight - 2) + wrongMargin))
+            if ((blocks[i].transform.position.y >= (firstBlockHeight - 2) - wrongMargin && blocks[i].transform.position.y <= (firstBlockHeight - 2) + wrongMargin && blocks[i].transform.position.z >= firstBlockZ - wrongMargin && blocks[i].transform.position.z <= firstBlockZ + wrongMargin))
             {
                 map[4] = blocks[i];
                 

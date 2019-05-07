@@ -62,7 +62,7 @@ public class GameController : MonoBehaviour
         if (scene.name == "GameHub")
         {
             fromHub = true;
-            print("from hub");
+            //print("from hub");
         }
         //print(fromHub);
 
@@ -104,7 +104,7 @@ public class GameController : MonoBehaviour
         if(score > 0 && !gameWon)
         {
             score -= Time.deltaTime;
-            Debug.Log(score);
+            //Debug.Log(score);
         }
         
     }
