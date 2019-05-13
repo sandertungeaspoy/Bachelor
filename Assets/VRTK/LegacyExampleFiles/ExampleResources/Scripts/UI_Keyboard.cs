@@ -23,7 +23,11 @@
         public void Enter()
         {
             VRTK_Logger.Info("You've typed [" + input.text + "]");
-            input.text = "";
+            //input.text = "";
+
+            FindObjectOfType<GameController>().CreateText(input.text);
+            FindObjectOfType<GameController>().displayLatest();
+            gameObject.SetActive(false);
         }
 
         private void Start()

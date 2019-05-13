@@ -86,6 +86,9 @@ public class SwitchScene : MonoBehaviour
             case "EscapeRoom":
                 SceneManager.LoadScene(13);
                 break;
+            case "TrialLevel":
+                SceneManager.LoadScene(0);
+                break;
             default:
                 Debug.Log("No scene found");
                 break;
