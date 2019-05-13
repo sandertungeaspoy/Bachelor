@@ -321,7 +321,7 @@ public class PlayerCannon : MonoBehaviour
 
     public void GameOver()
     {
-        ScoreText.text = "Congratulations! You beat all levels! \nHint: What is the Graviational acceleration on earth's surface?";
+        ScoreText.text = "Congratulations! You beat all levels! \nHint: What is the Gravitational acceleration on earth's surface?";
         StartCoroutine("ReturnToMain");
     }
 

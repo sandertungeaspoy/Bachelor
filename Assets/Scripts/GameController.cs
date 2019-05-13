@@ -106,11 +106,13 @@ public class GameController : MonoBehaviour
         if (fromHub)
         {
             UIscore.text = "";
+            Destroy(gameObject);
         }
         else
         {
             UIscore.text = "Score: " + score.ToString("0") + "\nCurrent best score: " + bestScore;
         }
+
         
     }
 
@@ -171,10 +173,14 @@ public class GameController : MonoBehaviour
 
         if (!File.Exists(path))
         {
-            File.WriteAllText(path, score.ToString());
+            string content = score.ToString("0") + ", " + name + "\n";
+            File.WriteAllText(path, content);
         }
-        string content = score.ToString("0") + ", " + name  + "\n";
-        File.AppendAllText(path, content);
+        else
+        { 
+            string content = score.ToString("0") + ", " + name  + "\n";
+            File.AppendAllText(path, content);
+        }
     }
 
     public void displayLatest()
