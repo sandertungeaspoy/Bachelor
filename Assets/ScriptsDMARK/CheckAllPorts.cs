@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class CheckAllPorts : MonoBehaviour
 {
 
-
+    GameController clearController;
 
     private LogicPort[] ports;
     private bool StartBeamA = true;
@@ -319,7 +319,15 @@ public class CheckAllPorts : MonoBehaviour
     }
     IEnumerator ReturnToMain()
     {
-        yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene(10);
+        yield return new WaitForSeconds(10f);
+        clearController = GameObject.Find("GameController").GetComponent<GameController>();
+        if (clearController.fromHub)
+        {
+            SceneManager.LoadScene(12);
+        }
+        else
+        {
+            SceneManager.LoadScene(10);
+        }
     }
 }

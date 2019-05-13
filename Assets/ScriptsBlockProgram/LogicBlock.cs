@@ -62,7 +62,15 @@ public class LogicBlock : MonoBehaviour
         //CurrentSum = onClick();
         //sum++;
         updateNumber();
-        Debug.Log("Shiit");
+        Debug.Log(FindObjectOfType<CheckBlocks>().getAllPlaced());
+        if (FindObjectOfType<CheckBlocks>().getAllPlaced())
+        {
+            FindObjectOfType<CheckBlocks>().DeleteBlocks();
+            FindObjectOfType<CheckBlocks>().RunBlockScript();
+            Debug.Log("Yeah");
+        }
+        
+        
     }
 
     public int getOutput()

@@ -174,8 +174,16 @@ public class playerQuiz : MonoBehaviour
 
     IEnumerator ReturnToMain()
     {
-        yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene(9);
+        yield return new WaitForSeconds(10f);
+        clearController = GameObject.Find("GameController").GetComponent<GameController>();
+        if (clearController.fromHub)
+        {
+            SceneManager.LoadScene(12);
+        }
+        else
+        {
+            SceneManager.LoadScene(9);
+        }
     }
 
     public bool gameFinished()

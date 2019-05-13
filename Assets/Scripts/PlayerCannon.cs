@@ -16,6 +16,11 @@ public class PlayerCannon : MonoBehaviour
     public TextMesh ScoreText;
     public Vector3 ahead = new Vector3(0, 0, 3);
 
+    public AudioClip CannonSound;
+    public AudioClip ExplosionSound;
+    public AudioSource CannonSoundSource;
+    public AudioSource ExplosionSoundSource;
+
     private float UpwardForce = 0f;
     public float shootingforce = 5f;
     public GameObject target;
@@ -23,7 +28,7 @@ public class PlayerCannon : MonoBehaviour
     private double yPositionBullet;
     public Text UI;
 
-   
+    GameController clearController;
 
     public VRTK_BaseControllable controllable;
     public VRTK_BaseControllable wheel;
@@ -49,8 +54,9 @@ public class PlayerCannon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        CannonSoundSource.clip = CannonSound;
+        ExplosionSoundSource.clip = ExplosionSound;
 
-        
         LevelRules();
         wheel.SetValue(0);
         cannon.SetValue(0);
@@ -133,7 +139,7 @@ public class PlayerCannon : MonoBehaviour
             Debug.Log("Hei");
             //targetsLeft--;
             levels[(int)CurrentLevel].setTargetsLeft(levels[(int)CurrentLevel].gettargetsLeft() -1);
-
+            ExplosionSoundSource.Play();
             
             CreateNewTarget();
         }
@@ -215,9 +221,6 @@ public class PlayerCannon : MonoBehaviour
         
         else if(CurrentLevel == 0 )
         {
-            //limitedAmmo = false;
-            //numberOfTargets = 1;
-           // targetsLeft = 1;
             LevelRulesSet = true;
 
             newLevel = new levelClass(1, false,99 ,false);
@@ -225,21 +228,14 @@ public class PlayerCannon : MonoBehaviour
         }
         else if(CurrentLevel == 1 )
         {
-            //limitedAmmo = true;
-            //currentAmmo = 10;
-            //numberOfTargets = 1;
-            //targetsLeft = 1;
+
             LevelRulesSet = true;
             newLevel = new levelClass(1, true,10, false);
             Debug.Log(2);
         }
         else if (CurrentLevel == 2)
         {
-            //numberOfTargets = 4;
-            //currentAmmo = 9;
-           // targetsLeft = 4;
-            //limitedAmmo = true;
-            //obstacle = true;
+
             LevelRulesSet = true;
             newLevel = new levelClass(1, true, 10, true);
             spawnObstacle1();
@@ -300,16 +296,7 @@ public class PlayerCannon : MonoBehaviour
     {
         Destroy(obstacleObject3.gameObject);       
     }
-    /*
-    public void destroyAllRemains()
-    {
-        targetDestroyed[] test = FindObjectsOfType<targetDestroyed>();
-        for(int i = 0; i < test.Length; i++)
-        {
-            test[i].DestroyRemains(test[i].gameObject);
-        }
-    }
-    */
+
 
     /// <summary>
     /// Check if the levels is cleared and starts the next one
@@ -334,14 +321,22 @@ public class PlayerCannon : MonoBehaviour
 
     public void GameOver()
     {
-        ScoreText.text = "Congratulations! You beat all levels! \nHint: What is the Graviational acceleration on earth's surface?";
+        ScoreText.text = "Congratulations! You beat all levels! \nHint: What is the Gravitational acceleration on earth's surface?";
         StartCoroutine("ReturnToMain");
     }
 
     IEnumerator ReturnToMain()
     {
-        yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene(3);
+        yield return new WaitForSeconds(10f);
+        clearController = GameObject.Find("GameController").GetComponent<GameController>();
+        if (clearController.fromHub)
+        {
+            SceneManager.LoadScene(12);
+        }
+        else
+        {
+            SceneManager.LoadScene(3);
+        }
     }
 
     /// <summary>
@@ -386,16 +381,16 @@ public class PlayerCannon : MonoBehaviour
             
         }
 
-        //currentAmmo--;
         ahead.y = (float)yPositionBullet;
         GameObject Bullet1 = Instantiate(bullet);
-        //Bullet1.transform.parent = Cannon.transform;
         bullet test = Bullet1.GetComponent<bullet>();
 
         test.transform.position = Cannon.transform.position;
 
         Debug.Log(controllable.GetValue());
 
+        CannonSoundSource.Play();    
+            
         //test.shootingForce = controllable.GetValue() * 10;
         test.shootingForce = GetForce();
 
@@ -409,7 +404,6 @@ public class PlayerCannon : MonoBehaviour
         print("Up " + test.upwardForce);
         print("Forward " + test.shootingForce);
         print("Controllable " + controllable.GetValue());
-        //print("TAN: " + (-System.Math.Tan(Radian)));
         print("aa " + wheel.GetNormalizedValue());
         print(90 - (wheel.GetNormalizedValue() * 110));
     }

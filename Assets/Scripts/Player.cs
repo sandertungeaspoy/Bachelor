@@ -168,7 +168,15 @@ public class Player : MonoBehaviour
     {
         print("Win switching Scenes" + currentQuestion);
         clearController.QuizCleared = GameWon;
-        SceneManager.LoadScene(0);
+        clearController = GameObject.Find("GameController").GetComponent<GameController>();
+        if (clearController.fromHub)
+        {
+            SceneManager.LoadScene(12);
+        }
+        else
+        {
+            SceneManager.LoadScene(13);
+        }
     }
 
     public void nextQuestion()
@@ -204,7 +212,7 @@ public class Player : MonoBehaviour
 
     public void gameLost()
     {
-        time = 8f;
+        time = 10f;
 
         if(time < 0)
         {

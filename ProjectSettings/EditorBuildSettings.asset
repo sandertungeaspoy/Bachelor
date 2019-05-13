@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/EscapeRoom.unity
-    guid: 7f910a9cd45ce154baaf9bf079b72baa
+    path: Assets/Scenes/TrialLevel.unity
+    guid: 4caf1378eba0d4e40ab9f21be2941101
   - enabled: 1
     path: Assets/Scenes/MathGame.unity
     guid: de94521e2e862574fb2b754972f69706
@@ -16,7 +16,7 @@ EditorBuildSettings:
     guid: 82ad8331d8866314a8f75f5b065c45d4
   - enabled: 1
     path: Assets/Scenes/EscapeRoom 1.unity
-    guid: ae3a2673a9ce6824db2e81ec6eca80a5
+    guid: 84cdb2b9568ba1f459891053dbb3f00e
   - enabled: 1
     path: Assets/Scenes/QuizData.unity
     guid: 06c2fde3e1690bc4daebc05c617d819f
@@ -34,8 +34,17 @@ EditorBuildSettings:
     guid: fa8707f6f7b81f244a3dbb27ceef69ce
   - enabled: 1
     path: Assets/Scenes/EscapeRoom 2.unity
-    guid: 52335e5fff385d646980575e2cd89f6f
+    guid: a38fe4dd431753d40928aecc7070e4b4
   - enabled: 1
     path: Assets/Scenes/EscapeRoom 3.unity
-    guid: 07cd524975b50d14da168590d3d4af91
+    guid: fe2368741acd7704d8ba98db62d49a38
+  - enabled: 1
+    path: Assets/Scenes/EscapeRoom 4.unity
+    guid: 692f1f9e7ff7750449acb3d1b18b8a8f
+  - enabled: 1
+    path: Assets/Scenes/GameHub.unity
+    guid: b90ca9a5a2a78144682ce644938ec1b7
+  - enabled: 1
+    path: Assets/Scenes/EscapeRoom.unity
+    guid: 7f910a9cd45ce154baaf9bf079b72baa
   m_configObjects: {}

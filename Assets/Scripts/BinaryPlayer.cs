@@ -19,6 +19,8 @@ public class BinaryPlayer : MonoBehaviour
     private float timeLimit = 40;
     private float score;
     private bool gameOver = false;
+    GameController clearController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,15 +66,24 @@ public class BinaryPlayer : MonoBehaviour
 
     IEnumerator ReturnToMain()
     {
-        yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene(9);
+        yield return new WaitForSeconds(10f);
+        clearController = GameObject.Find("GameController").GetComponent<GameController>();
+        clearController.score += score;
+        if (clearController.fromHub)
+        {
+            SceneManager.LoadScene(12);
+        }
+        else
+        {
+            SceneManager.LoadScene(9);
+        }
     }
 
     void checkIfCorrect()
     {
         if (sum == correctAnswer && !gameOver)
         {
-            score += 100;
+            score += 10;
             NumberOfCorrectAnswers++;
             generateNewQuestion();
             

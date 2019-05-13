@@ -21,16 +21,14 @@ public class DoorButton : MonoBehaviour
     int prevState = 0;
     public bool doorOpen = false;
 
-    public Animator animatorLeft;
-    public Animator animatorRight;
+    public Animator animator;
 
     private bool animTrigger = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        animatorLeft = GameObject.Find("DoorLeft (1)").GetComponent<Animator>();
-        animatorRight = GameObject.Find("DoorRight (1)").GetComponent<Animator>();
+        animator = GameObject.Find("Wall_Stone_WoodenDoor").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -86,8 +84,7 @@ public class DoorButton : MonoBehaviour
         if (doorOpen == false && animTrigger)
         {
             print("Click");
-            animatorLeft.Play("Open");
-            animatorRight.Play("Open");
+            animator.Play("Play");
             doorOpen = true;
         }
         animTrigger = true;

@@ -80,6 +80,15 @@ public class SwitchScene : MonoBehaviour
             case "BlockProg":
                 SceneManager.LoadScene(8);
                 break;
+            case "GameHub":
+                SceneManager.LoadScene(12);
+                break;
+            case "EscapeRoom":
+                SceneManager.LoadScene(13);
+                break;
+            case "TrialLevel":
+                SceneManager.LoadScene(0);
+                break;
             default:
                 Debug.Log("No scene found");
                 break;
